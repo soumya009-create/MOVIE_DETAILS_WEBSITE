@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-btn {
+    padding: 0.75rem 2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #45a049;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-section {
+    text-align: center;
+    color: white;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.movie-details-section {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding:10px 20px;
+    max-width: 800px;
+    width: 100%;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* border: 2px solid rgb(75, 75, 210); */
+}
+
+.movie-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.movie-poster {
+    width: 300px;
+    height:fit-content;
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.movie-info {
+    flex: 1;
+    padding: 15px 20px;
+}
+
+.movie-info h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.movie-info p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.movie-info strong {
+    color: #764ba2;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        /* flex-direction: column; */
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        
+    }
+   
+
+    .search-form {
+        width: 100vw;
+    }
+
+    .movie-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.8rem;
+    }
+}
